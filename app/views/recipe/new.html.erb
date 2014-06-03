@@ -1,0 +1,48 @@
+<p> Hi Create a new recipe. Try to upload a pic it makes the recipe look more attractive. </p>
+<%= form_tag "/recipe", "method" => "post" %>
+<p>
+<%= label_tag "name_recipe", "What is the dish called?" %>
+<%= text_field_tag "name_recipe" %>
+</p>
+
+<p>
+<%= label_tag "ing", "What is the stuff required to make?" %>
+<%= text_field_tag "ing" %>
+</p>
+
+<p>
+<%= label_tag "pro", "What is the procedure to make?" %>
+<%= text_field_tag "pro" %>
+</p>
+
+<p>
+<%= label_tag "time_taken", "What is the time required to cook?" %>
+<%= text_field_tag "time_taken" %>
+</p>
+
+<p>
+<%= label_tag "type_dish", "what is the type of dish (e.g Indian, Chinese, etc.)"%>
+<%= text_field_tag "type_dish"%>
+</p>
+
+<div class="form-group">
+        <%= label_tag "meat", "Does the food contain meat?" %>
+        <%= select_tag "meat", options_for_select([["yes"], ["no"]],), "class" => "form-control" %>
+        </div>
+
+<div class="form-group">
+        <%= label_tag "gluten", "Is the food gluten-free?" %>
+        <%= select_tag "gluten", options_for_select([["yes"], ["no"]],), "class" => "form-control" %>
+        </div>
+
+<p>
+<%= label_tag "url" => "Please upload a pic" %>
+<%= text_field_tag "url" %>
+</p>
+<%= submit_tag%> or <%= link_to "cancel", "/recipe" %>
+
+
+
+
+
+

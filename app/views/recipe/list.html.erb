@@ -1,0 +1,10 @@
+<ul> 
+<% Recipe.read.order("name").each do |food| %>
+	<li><%= link_to food["name"], "/recipe/#{food["id"]}" %>
+	<%= link_to "(Delete)", "/recipe/#{food["id"]}", "method" => "delete" %>
+    <%= link_to "(Edit)", "/recipe/#{food["id"]}/edit" %>
+    
+	</li>
+
+	<%end %>
+	</ul>

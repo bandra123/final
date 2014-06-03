@@ -1,4 +1,48 @@
 Rails.application.routes.draw do
+
+
+  get '/' => 'recipe/index'
+  
+#--------------recipe related
+  #create a new recipe
+  get '/recipe/new' => 'recipe#new'
+  post '/recipe' => 'recipe#create'
+
+  #view the existing recipes
+  get '/recipe' => 'recipe#list'
+  get '/recipe/:id' => 'recipe#display'
+
+  #edit existing recipes
+  get '/recipe/:id/edit' => 'recipe#edit'
+  patch '/recipe/:id' => 'recipe#update'
+
+
+
+  #delete existing recipes
+  delete '/recipe/:id' => 'recipe#destroy'
+
+
+  #----------user related 
+
+  #create a new user profile 
+  get '/user/new' => 'user#new'
+  post '/user' => 'user#create'
+
+  #edit an existing user profile 
+  get '/user/:id/edit' => 'user#edit'
+  patch '/user/:id' => 'user#update'
+
+  #delete an existing profile 
+  delete '/user/:id' => 'user#destroy'
+
+
+
+
+
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,4 +1,36 @@
-# Example table for a typical Book model.
+Recipe:
+   - name: text 
+   - ingredients: text
+   - procedure: text
+   - time: integer #in minutes 
+   - picture_url: string
+   - ethnic: string #Indian, Chinese, fastfood etc. 
+   - non_veg: string #yes/no
+   - gluten_free: string # yes/no
+
+   
+
+User:
+   - username: string
+   - password: string 
+   - name: string 
+
+Review:
+   - user_id: integer 
+   - recipe_id: integer
+   - rating: integer #out of 10 
+   - content: text
+   - created_on: datetime 
+
+
+
+   
+
+   
+
+
+
+   # Example table for a typical Book model.
 #
 # Book:
 #   - title: string

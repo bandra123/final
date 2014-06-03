@@ -1,0 +1,6 @@
+ <% food = Recipe.find_by("id" => params["id"]) %>
+ 
+
+ <p> The name of the dish: <%= food["name"] %> </p>
+ <p> Does the food contain meat? <%= food["non_veg"] %> </p>
+
