@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  get '/' => 'recipe/index'
+  get '/' => 'recipe#index'
   
 #--------------recipe related
   #create a new recipe
