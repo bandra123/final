@@ -1,6 +1,14 @@
  <% food = Recipe.find_by("id" => params["id"]) %>
  
 
- <p> The name of the dish: <%= food["name"] %> </p>
- <p> Does the food contain meat? <%= food["non_veg"] %> </p>
+ <p> <big>The name of the dish:</big> <%= food["name"] %> </p>
+ <p> <big>Does the food contain meat?</big> <%= food["non_veg"] %> </p>
+ <p> <big>Is the food gluten-free?</big> <%= food["gluten_free"] %></p>
+
+ <p><big>Stuff required. </big><%= food["ingredients"] %></p>
+ <p><big>Procedure.</big> <%= food["procedure"] %></p>
+
+ <p> <div class="col-md-4">
+    <%= image_tag(food["picture_url"]) %>
+  </div></p>
 

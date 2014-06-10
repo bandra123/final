@@ -8,7 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Final
   class Application < Rails::Application
-        I18n.enforce_available_locales = false
+        I18n.enforce_available_locales = true
     Hirb.enable if defined?(Hirb)
 
     # Settings in config/environments/* take precedence over those specified here.

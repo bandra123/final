@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  devise_for :users
   get '/' => 'recipe#index'
   
 #--------------recipe related
@@ -25,18 +26,18 @@ Rails.application.routes.draw do
   #----------user related 
 
   #create a new user profile 
-  get '/user/new' => 'user#new'
-  post '/user' => 'user#create'
+  
 
   #edit an existing user profile 
-  get '/user/:id/edit' => 'user#edit'
-  patch '/user/:id' => 'user#update'
+  
 
   #delete an existing profile 
-  delete '/user/:id' => 'user#destroy'
+  
 
 
-
+get "/callback" => "facebook#callback"
+get "/facebook_profile" => "facebook#facebook_profile"
+root :to => 'facebook#index'
 
 
 
